@@ -97,6 +97,7 @@ When started, the sender enters an infinite loop in which it asks the user to su
 ![Start Broker](https://github.com/anagogu/labPAD/blob/master/images/72279873_2467412936835954_7796125512148975616_n.png)
 
 The messages are then sent to the broker which consequently inspects the 'type' field of the message and dispatches it to the respective receivers.
+
 ![Start Broker](https://github.com/anagogu/labPAD/blob/master/images/72654755_2139464493025155_3912854239042338816_n.png)
 
 The message was processed and transmitted to the receiver and the queue remained empty.
