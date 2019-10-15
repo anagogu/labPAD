@@ -31,9 +31,11 @@ The 3 subprojects included in the solution are the following:
 
 We chose to work with the **Maven** framework, having a later experience of working with this framework.
 We added Apache Maven dependency in project POM
-'''<dependency>
+```
+<dependency>
   <groupId>org.apache.maven.plugins</groupId>
   <artifactId>maven-compiler-plugin</artifactId>
   <version>3.8.1</version>
   <type>maven-plugin</type>
-</dependency>'''
+</dependency>
+```
