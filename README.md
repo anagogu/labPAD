@@ -67,7 +67,7 @@ try {
             broker.start();
         }
  ```
-![Alternative text](C:\Users\mtcaci\Documents\un\broker.png "Optional title")
+![Start Broker](https://github.com/anagogu/labPAD/blob/master/broker.png?raw=true)
 
 After that it is possible to start a couple of instances of receivers. They should be told on which port to start, on what address and port is the broker located should the given receiver be subscribed to.
 ```
