@@ -70,7 +70,7 @@ try {
             broker.start();
         }
  ```
-![Start Broker](https://github.com/anagogu/labPAD/blob/master/broker.png?raw=true)
+![Start Broker](https://github.com/anagogu/labPAD/blob/master/images/broker1.png)
 
 After that it is possible to start a couple of instances of receivers. They should be told on which port to start, on what address and port is the broker located should the given receiver be subscribed to.
 ```
@@ -83,7 +83,6 @@ All the sender should know is the address and port of the broker.
 Sender sender = new Sender();
         sender.startConnection("localhost", 4500); 
 ```  
-![Start Broker](https://github.com/anagogu/labPAD/blob/master/images/72279873_2467412936835954_7796125512148975616_n.png)
 This already illustrates how decoupled is the sender from the receiver which is one of the main points of such an organisation of the system.
 
 When started, the sender enters an infinite loop in which it asks the user to supply a message type and a message payload over and over again. 
@@ -99,3 +98,7 @@ When started, the sender enters an infinite loop in which it asks the user to su
 
 The messages are then sent to the broker which consequently inspects the 'type' field of the message and dispatches it to the respective receivers.
 ![Start Broker](https://github.com/anagogu/labPAD/blob/master/images/72654755_2139464493025155_3912854239042338816_n.png)
+
+The message was processed and transmitted to the receiver and the queue remained empty.
+
+![Start Broker](https://github.com/anagogu/labPAD/blob/master/images/72282720_552472872167148_2298731428134780928_n.png)
