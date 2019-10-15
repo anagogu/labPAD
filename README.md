@@ -60,5 +60,34 @@ Add Jackson dependency in POM:
 </dependency>
 ```
 ### Run application
-The broker should be started first, it operates on port 3000 which is hardcoded in its source code thus it does not require any command line arguments.
+The broker should be started first, it operates on port 4500 which is hardcoded in its source code thus it does not require any command line arguments.
+```
+try {
+            Broker broker = new Broker(4500);
+            broker.start();
+        }
+ ```
 ![Alternative text](C:\Users\mtcaci\Documents\un\broker.png "Optional title")
+
+After that it is possible to start a couple of instances of receivers. They should be told on which port to start, on what address and port is the broker located should the given receiver be subscribed to.
+```
+     Receiver receiver = new Receiver();
+        receiver.startConnection("localhost", 4500);
+```
+Now that the broker and receivers are working, a sender can be deployed as well. 
+All the sender should know is the address and port of the broker.
+```
+Sender sender = new Sender();
+        sender.startConnection("localhost", 4500); 
+```       
+This already illustrates how decoupled is the sender from the receiver which is one of the main points of such an organisation of the system.
+
+When started, the sender enters an infinite loop in which it asks the user to supply a message type and a message payload over and over again. The messages are then sent to the broker which consequently inspects the 'type' field of the message and dispatches it to the respective receivers.
+```
+ while (true) {
+            Scanner scanner = new Scanner(System.in);
+            String text = scanner.next();
+            Message message = new Message(text, MessageOrder.SEND);
+            sender.sendMessage(message);
+        }
+  ```
