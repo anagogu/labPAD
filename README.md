@@ -21,3 +21,10 @@ of the selected language
 asynchronous or concurrent processing
 
 > Elaborate the abstract level of message routing.
+
+# Project arhitecture
+The 3 subprojects included in the solution are the following:
+
+- **sender** - the entity that sends out messages.
+- **receiver** - the entity that subscribes to a certain type of messages and expects them
+- **broker** - the middleware used to route the messages to subscribers
