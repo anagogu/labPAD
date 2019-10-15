@@ -82,10 +82,11 @@ All the sender should know is the address and port of the broker.
 ```
 Sender sender = new Sender();
         sender.startConnection("localhost", 4500); 
-```       
+```  
+![Start Broker](https://github.com/anagogu/labPAD/blob/master/images/72279873_2467412936835954_7796125512148975616_n.png)
 This already illustrates how decoupled is the sender from the receiver which is one of the main points of such an organisation of the system.
 
-When started, the sender enters an infinite loop in which it asks the user to supply a message type and a message payload over and over again. The messages are then sent to the broker which consequently inspects the 'type' field of the message and dispatches it to the respective receivers.
+When started, the sender enters an infinite loop in which it asks the user to supply a message type and a message payload over and over again. 
 ```
  while (true) {
             Scanner scanner = new Scanner(System.in);
@@ -94,4 +95,7 @@ When started, the sender enters an infinite loop in which it asks the user to su
             sender.sendMessage(message);
         }
   ```
->>>>>>> 51f092ba2ca2dd220bfd2105b1d64be4099ea39e
+![Start Broker](https://github.com/anagogu/labPAD/blob/master/images/72279873_2467412936835954_7796125512148975616_n.png)
+
+The messages are then sent to the broker which consequently inspects the 'type' field of the message and dispatches it to the respective receivers.
+![Start Broker](https://github.com/anagogu/labPAD/blob/master/images/72654755_2139464493025155_3912854239042338816_n.png)
