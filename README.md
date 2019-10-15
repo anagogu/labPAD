@@ -28,3 +28,12 @@ The 3 subprojects included in the solution are the following:
 - **sender** - the entity that sends out messages.
 - **receiver** - the entity that subscribes to a certain type of messages and expects them
 - **broker** - the middleware used to route the messages to subscribers
+
+We chose to work with the **Maven** framework, having a later experience of working with this framework.
+We added Apache Maven dependency in project POM
+'''<dependency>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-compiler-plugin</artifactId>
+  <version>3.8.1</version>
+  <type>maven-plugin</type>
+</dependency>'''
