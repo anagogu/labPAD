@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-#Hello
-###PAD
+
 ##Message-Brocker application
 =======
 # Message Broker
