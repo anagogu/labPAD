@@ -5,27 +5,27 @@
 Agent-based integration of messages that would allow asynchronous communication between the distributed components of a system.
 
 
-> Defining the working protocol of the messaging agent
+#### 1. Defining the working protocol of the messaging agent
 
 - The format (type) of messages to be transmitted. It is recommended to use XML format
 - Number of unidirectional channels (variable / fixed, depending on the type of messages, etc.)
 - The structure of the communication provided by the agent 
 - Delivery policies for various cases defined by the agent's working logic
 
-> Elaborate the abstract level of communication (network) necessary for the elements for receiving / sending messages by the transmitter to the receiver;
+#### 2. Elaborate the abstract level of communication (network) necessary for the elements for receiving / sending messages by the transmitter to the receiver;
 - The transport protocol is chosen depending on the objectives of the working protocol
 - Concurrent processing of applications
 
-> Elaboration of the elements that ensure the retention of the received messages 
+#### 3. Elaboration of the elements that ensure the retention of the received messages 
 - Transient method: messages will be stored in concurrent collections of specific data
 of the selected language
 - Persistent method: messages will be serialized / deserialized using methods
 asynchronous or concurrent processing
 
-> Elaborate the abstract level of message routing.
+#### 4. Elaborate the abstract level of message routing.
 
 # Project arhitecture
-The 3 subprojects included in the solution are the following:
+The 4 subprojects included in the solution are the following:
 
 - **sender** - the entity that sends out messages.
 - **receiver** - the entity that subscribes to a certain type of messages and expects them
@@ -63,7 +63,7 @@ Add Jackson dependency in POM:
 </dependency>
 ```
 ## Run application
-The broker should be started first, it operates on port 4500 which is hardcoded in its source code thus it does not require any command line arguments.
+The broker should be started first, it operates on port 4500 which is hardcoded in its source code thus it does not require any inputs arguments.
 ```
 try {
             Broker broker = new Broker(4500);
