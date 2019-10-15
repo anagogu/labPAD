@@ -39,3 +39,14 @@ We added Apache Maven dependency in project POM
   <type>maven-plugin</type>
 </dependency>
 ```
+For data exchange format between browsers and web servers we used **Jackson**. It is a Java JSON API which provides several different ways to work with JSON. Jackson is one of the most popular Java JSON APIs out there. You can find Jackson [here!](https://github.com/FasterXML/jackson)
+
+
+Jackson contains 2 different JSON parsers:
+
+The Jackson ObjectMapper which parses JSON into custom Java objects, or into a Jackson specific tree structure (tree model).
+The Jackson JsonParser which is Jackson's JSON pull parser, parsing JSON one token at a time.
+Jackson also contains two JSON generators:
+
+The Jackson ObjectMapper which can generate JSON from custom Java objects, or from a Jackson specific tree structure (tree model).
+The Jackson JsonGenerator which can generate JSON one token at a time.
