@@ -1,6 +1,5 @@
 
-##Message-Brocker application
-=======
+
 # Message Broker
 ## Purpose of laboratory
 Agent-based integration of messages that would allow asynchronous communication between the distributed components of a system.
@@ -31,6 +30,7 @@ The 3 subprojects included in the solution are the following:
 - **sender** - the entity that sends out messages.
 - **receiver** - the entity that subscribes to a certain type of messages and expects them
 - **broker** - the middleware used to route the messages to subscribers
+- **common** - a set of classes that are shared among two or more subprojects
 
 We chose to work with the **Maven** framework, having a later experience of working with this framework.
 We added Apache Maven dependency in project POM
@@ -45,7 +45,7 @@ We added Apache Maven dependency in project POM
 For data exchange format between browsers and web servers we used **Jackson**. It is a Java JSON API which provides several different ways to work with JSON. Jackson is one of the most popular Java JSON APIs out there. You can find Jackson [here!](https://github.com/FasterXML/jackson)
 
 
-#####Jackson contains 2 different JSON parsers:
+##### Jackson contains 2 different JSON parsers:
 
 > The Jackson ObjectMapper which parses JSON into custom Java objects, or into a Jackson specific tree structure (tree model).
 > The Jackson JsonParser which is Jackson's JSON pull parser, parsing JSON one token at a time.
@@ -62,7 +62,7 @@ Add Jackson dependency in POM:
   <version>2.9.6</version>
 </dependency>
 ```
-### Run application
+## Run application
 The broker should be started first, it operates on port 4500 which is hardcoded in its source code thus it does not require any command line arguments.
 ```
 try {
